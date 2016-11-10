@@ -109,10 +109,11 @@ def gf_poly_eval(p, x):
         y = gf_mul(y, x) ^ p[i]
     return y
 
+"""
 ########## reedsolomon ##########
-# nsym is the number of bytes in the error correction code.
-# the algorithm can correct up to ``nsym/2`` of the errors in the message.
-
+nsym is the number of bytes in the error correction code.
+the algorithm can correct up to ``nsym/2`` of the errors in the message.
+"""
 def rs_generator_poly(nsym):
     g = [1]
     for i in range(0, nsym):
